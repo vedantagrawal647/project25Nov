@@ -26,15 +26,19 @@
         <h3 style = "text-align: center; text-decoration: underline;">Search Your Favourite Movies</h3>
         <input type = "text" id = "movie" placeholder = "Search" />
         <button id = "submit" onclick="loadDoc()">Submit</button>
-
-        <div id = "demo"></div>
     </div>
-    <div id="div2">
-        <button onclick="functiona1()" class="button1" id="buttonnnn1" style="border-color: grey;""></button>
-        <button onclick="functiona2()" class="button1" id="buttonnnn2" style="border-color: pink;"></button>
-        <button onclick="functiona3()" class="button1" id="buttonnnn3" style="border-color: blue;"></button>
-        <button onclick="functiona4()" class="button1" id="buttonnnn4" style="border-color: green;"></button>
-        <button onclick="functiona5()" class="button1" id="buttonnnn5" style="border-color: orange;"></button>
+    <div id="div2" style = "display: flex; justify-content: center;margin: 20px auto;">
+        <div>
+            <button onclick="functiona1()" class="button1" id="buttonnnn1" style="padding: 20px;border-color: grey;""></button>
+        <button onclick="functiona2()" class="button1" id="buttonnnn2" style="padding: 20px;border-color: pink;"></button>
+        <button onclick="functiona3()" class="button1" id="buttonnnn3" style="padding: 20px;border-color: blue;"></button>
+        <button onclick="functiona4()" class="button1" id="buttonnnn4" style="padding: 20px;border-color: green;"></button>
+        <button onclick="functiona5()" class="button1" id="buttonnnn5" style="padding: 20px;border-color: orange;"></button>
+        </div>
+    </div>
+
+    <div style = "max-width: 80%; margin: 0 auto 0 auto; border: 5px solid #d3d3d3; padding: 20px 10px;">
+        <div id = "demo"></div>
     </div>
 
     <script>
