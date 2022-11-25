@@ -23,7 +23,7 @@
 </head>
 <body>
     <div style = "max-width: 80%; margin: 0 auto 0 auto; border: 5px solid #d3d3d3; padding: 20px 10px">
-        <h3 style = "text-align: center; text-decoration: underline;">Search Your Favourite Movies</h3>
+        <h3 id= "heading" style = "text-align: center; text-decoration: underline;">Search Your Favourite Movies</h3>
         <input type = "text" id = "movie" placeholder = "Search" />
         <button id = "submit" onclick="loadDoc()">Submit</button>
     </div>
@@ -61,15 +61,19 @@
 
 function functiona1(){
     document.body.style.backgroundColor="grey";
+    document.getElementById("heading").style.color = "#d3d3d3";
 }
 function functiona2(){
     document.body.style.backgroundColor="pink";
+    document.getElementById("heading").style.color = " #890a81";
 }
 function functiona3(){
     document.body.style.backgroundColor="blue";
+    document.getElementById("heading").style.color = " #130a89";
 }
 function functiona4(){
     document.body.style.backgroundColor="green";
+    document.getElementById("heading").style.color = "yellow";
 }
 function functiona5(){
     document.body.style.backgroundColor="orange";
