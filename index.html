@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Blocks Monu</title>
+    <style>
+        .button1{
+            border-radius: 50%;
+            height:10px;
+        }
+        #div2
+        {
+            border:2px solid black;
+            width: 30%;
+            height: 40px;
+            padding: 10px 30px;
+            margin-left: 30vw;
+            /*vertical-align: center;*/
+        }
+    </style>
+</head>
+<body>
+    <div style = "max-width: 80%; margin: 0 auto 0 auto; border: 5px solid #d3d3d3; padding: 20px 10px">
+        <h3 style = "text-align: center; text-decoration: underline;">Search Your Favourite Movies</h3>
+        <input type = "text" id = "movie" placeholder = "Search" />
+        <button id = "submit" onclick="loadDoc()">Submit</button>
+
+        <div id = "demo"></div>
+    </div>
+    <div id="div2">
+        <button onclick="functiona1()" class="button1" id="buttonnnn1" style="border-color: grey;""></button>
+        <button onclick="functiona2()" class="button1" id="buttonnnn2" style="border-color: pink;"></button>
+        <button onclick="functiona3()" class="button1" id="buttonnnn3" style="border-color: blue;"></button>
+        <button onclick="functiona4()" class="button1" id="buttonnnn4" style="border-color: green;"></button>
+        <button onclick="functiona5()" class="button1" id="buttonnnn5" style="border-color: orange;"></button>
+    </div>
+
+    <script>
+        function loadDoc() {
+  var name = document.getElementById('movie').value;
+  document.getElementById('demo').innerHTML = '';
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var response = JSON.parse(this.responseText);
+      for(var i = 0; i < response.length; i++){
+        let r = response[i].show.image.medium;
+        document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + `<img src ='${r}' />`;
+      }
+    }
+  };
+  xhttp.open("GET", `https://api.tvmaze.com/search/shows?q=${name}`, true);
+  xhttp.send();
+}
+
+function functiona1(){
+    document.body.style.backgroundColor="grey";
+}
+function functiona2(){
+    document.body.style.backgroundColor="pink";
+}
+function functiona3(){
+    document.body.style.backgroundColor="blue";
+}
+function functiona4(){
+    document.body.style.backgroundColor="green";
+}
+function functiona5(){
+    document.body.style.backgroundColor="orange";
+}
+    </script>
+</body>
+</html>
